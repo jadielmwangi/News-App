@@ -14,7 +14,7 @@ This is an application that help people view different articles and news from di
 
 ### Setup Instructions
 
-1. Clone or Download from github, https://github.com/jadielmwangi/News-APP
+1. Clone or Download from github, https://github.com/jadielmwangi/News-APP.git
 2. cd into the projectfolder
 3. run chmod+x on your project directory to grant permissions.
 4. ./start.sh to execute the program
@@ -26,3 +26,4 @@ This is an application that help people view different articles and news from di
 * Html
 * Bootstrap
 * css
+## License

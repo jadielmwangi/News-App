@@ -1,11 +1,17 @@
-/* @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Alata&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Knewave&display=swap');
 
-
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        background-color: rgb(138, 127, 127);
+        color: red;
+        /* overflow-x: hidden; */
+    }
 
  h3{
      text-align: center;
      color: rgb(10, 4, 4);
-     font-family: 'Alata', sans-serif;
+     font-family:'Knewave', ;
  }
  
  
@@ -15,30 +21,11 @@
  }
 
  .news{
-    box-shadow: 0.5px 0.5px 0.5px 0.5px black;
     font-size: 20px;
-    margin:10px;
+    margin:15px;
     font-family: 'Signika', sans-serif;
-    height: 150px;
+
     
  }
 
- #read{
-     margin:5px;
- }
 
- .navbar h1{
-     text-align: center;
-     margin:30px;
-     font-family: 'Calistoga', cursive;
-     font-size: 40px;
- }
- .navbar p{
-    font-family: '
-    font-size: 30px;
-    text-align: center;
- }
-
- .container-fluid{
-    background-color: darkgray;
- } */

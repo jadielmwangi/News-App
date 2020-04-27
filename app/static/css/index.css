@@ -1,0 +1,44 @@
+/* @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+
+
+
+ h3{
+     text-align: center;
+     color: rgb(10, 4, 4);
+     font-family: 'Alata', sans-serif;
+ }
+ 
+ 
+ 
+ #content{
+     background-color:#93C1AD;
+ }
+
+ .news{
+    box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+    font-size: 20px;
+    margin:10px;
+    font-family: 'Signika', sans-serif;
+    height: 150px;
+    
+ }
+
+ #read{
+     margin:5px;
+ }
+
+ .navbar h1{
+     text-align: center;
+     margin:30px;
+     font-family: 'Calistoga', cursive;
+     font-size: 40px;
+ }
+ .navbar p{
+    font-family: '
+    font-size: 30px;
+    text-align: center;
+ }
+
+ .container-fluid{
+    background-color: darkgray;
+ } */

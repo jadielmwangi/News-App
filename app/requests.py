@@ -78,12 +78,12 @@ def process_article(article_list):
                 articles_result.append(article_result)
     return articles_result
 
-# def search_news(name):
-#     search_news_url = 'https://newsapi.org/v2/everything?q={}&apiKey={}'.format(name,api_key)
-#     search_news_response = request.get(search_movie_url).json()
+def search_news(name):
+    search_news_url = 'https://newsapi.org/v2/everything?q={}&apiKey={}'.format(name,api_key)
+    search_news_response = request.get(search_movie_url).json()
 
-#     if search_news_response['articles']:
-#         search_news_list = search_news_response['articles']
-#         search_news_result = process_article(search_news_list) 
+    if search_news_response['articles']:
+        search_news_list = search_news_response['articles']
+        search_news_result = process_article(search_news_list) 
 
-#     return search_news_result  
+    return search_news_result  

@@ -2,5 +2,6 @@ h1{
     font-size: large;
     color: blue;
     font-weight: bold;
+    align-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

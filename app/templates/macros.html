@@ -1,4 +1,4 @@
-{% macro displayNewsList(news_results) %}
+{% macro display_news(news_results) %}
 
 {% for result in news_result %}
 
@@ -9,7 +9,7 @@
              <h3>{{result.name }}</h3>
         </div>
         <div class="card-body">
-            <p class="description">{{result.description|truncate(150)}}</p>
+            <p class="description">{{result.description}}</p>
         </div>
         <div class="read">
             <a id="read" class="header section-link bg-success" href="/news/{{result.id}}"> Read more</a>

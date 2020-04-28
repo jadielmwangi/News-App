@@ -18,6 +18,7 @@ class TestNews(unittest.TestCase):
 
 
 
+
 class TestArticles(unittest.TestCase):
     '''
     Test Class to test the behaviour of the Movie class

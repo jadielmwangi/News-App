@@ -22,7 +22,7 @@ def get_sources():
     '''
 
     get_news_url = base_url + api_key
-    # with urllib.request.urlopen(get_news_url) as url:
+    
 
     with urllib.request.urlopen(get_news_url) as url:
      get_news_response = request.get(get_news_url).json()
@@ -32,6 +32,7 @@ def get_sources():
         news_result = process_result(news_result_list)
 
         return news_result
+
 
 def process_result(news_result_list):
     news_result= []
@@ -50,7 +51,7 @@ def process_result(news_result_list):
             news_result.append(news_object)
     return news_result
 
-#get articles
+#get articles:
 def get_article(id):
     get_article_url = article_base_url.format(id,api_key)
     
@@ -77,12 +78,12 @@ def process_article(article_list):
                 articles_result.append(article_result)
     return articles_result
 
-def search_news(name):
-    search_news_url = 'https://newsapi.org/v2/everything?q={}&apiKey={}'.format(name,api_key)
-    search_news_response = request.get(search_movie_url).json()
+def find_news(name):
+    find_news_url = 'https://newsapi.org/v2/everything?q={}&apiKey={}'.format(name,api_key)
+    find_news_response = request.get(search_news_url).json()
 
-    if search_news_response['articles']:
-        search_news_list = search_news_response['articles']
-        search_news_result = process_article(search_news_list) 
+    if find_news_response['articles']:
+        find_news_list = find_news_response['articles']
+        find_news_result = process_article(search_news_list) 
 
-    return search_news_result  
+    return find_news_result  

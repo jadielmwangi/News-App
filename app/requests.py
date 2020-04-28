@@ -1,7 +1,6 @@
 import urllib.request,json
 from .models import News, Articles
 
-# import requests
 # from flask import request
  
 #Getting api key

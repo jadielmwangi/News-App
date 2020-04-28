@@ -1,31 +1,32 @@
-/* @import url('https://fonts.googleapis.com/css?family=Alata&display=swap'); */
-@import url('https://fonts.googleapis.com/css?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+/* @media screen and (min-width: 480px) and (max-width: 767px) {
     body {
         background-color: rgb(138, 127, 127);
         color: red;
-        /* overflow-x: hidden; */
-    }
+        
+    } */
+
+ h1{
+    text-align: center;
+    color: blue;
+    font-family: 'ABeeZee'
+}
 
  h3{
      text-align: center;
-     color: rgb(10, 4, 4);
-     font-family:'Knewave', ;
- }
- 
- 
- 
- #content{
-     background-color:#93C1AD;
- }
-
- .news{
-    font-size: 20px;
-    margin:15px;
-    font-family: 'Signika', sans-serif;
-
+     color: blue;
+     font-family: 'Muli', sans-serif;
     
  }
+ 
+ 
+ 
+ #concept{
+     background-color:#93C1AD;
+     font-family: 'ABeeZee'
+ }
+
 
 

@@ -1,29 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Alata|Signika&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300&display=swap');
 h4{
-    font-family: 
+    font-family: 'Roboto', sans-serif;
+
 }
 
 *{
-    background-color: #999999;
+    background-color: darkgray;
 }
 
-.article_result{
-    margin:20px;
 
-}
 
 p{
-    font-family: 
-    /* font-size: 15px; */
+ font-family: 'Roboto Slab', serif;
+ color: black;
+
+
 }
 
 .navbar{
     text-align: center;
     margin:30px;
-    font-family: 
-    font-size: 40px;
+    font-family: 'Knewave', ;
+
 }
 
 .container-fluid{

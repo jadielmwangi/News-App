@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=ABeeZee');
 
-/* @media screen and (min-width: 480px) and (max-width: 767px) {
-    body {
-        background-color: rgb(138, 127, 127);
-        color: red;
-        
-    } */
 
  h1{
     text-align: center;
@@ -25,7 +19,8 @@
  
  #concept{
      background-color:#93C1AD;
-     font-family: 'ABeeZee'
+     font-family: 'ABeeZee';
+     font-size: medium;
  }
 
 

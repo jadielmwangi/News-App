@@ -1,6 +1,6 @@
-{% macro display_news(news_results) %}
+{% macro displayNewsList(news_results) %}
 
-{% for result in news_result %}
+{% for result in news_results %}
 
 <div class="col-md-12">
         
@@ -9,7 +9,7 @@
              <h3>{{result.name }}</h3>
         </div>
         <div class="card-body">
-            <p class="description">{{result.description}}</p>
+            <p class="description">{{result.description|truncate(150)}}</p>
         </div>
         <div class="read">
             <a id="read" class="header section-link bg-success" href="/news/{{result.id}}"> Read more</a>
@@ -34,7 +34,7 @@
             <h4 class="card-title"> Written By: {{arts.author}}</h4>
             <p class="card-text">{{arts.description |truncate(200)}}</p>
             <div class="card-header">Published on: {{arts.publishedAt}}</div>
-            <a href="{{arts.url}}"  target="_blank" class="btn btn-success stretched-link">Read more</a>
+            <a href="{{arts.url}}"  target="_blank" class="btn btn-success stretched-link"> more</a>
             </div>
         </div>
     </div>

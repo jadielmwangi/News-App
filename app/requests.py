@@ -1,7 +1,6 @@
-import urllib.request,json
 from .models import News, Articles
-
-# from flask import request
+import requests
+ 
  
 #Getting api key
 api_key = None
@@ -15,6 +14,7 @@ def configure_request(app):
     base_url = app.config['NEWS_API_BASE_URL']
     article_base_url = app.config['ARTICLE_API_BASE_URL']
 
+    
 
 def get_sources():
     '''
@@ -22,21 +22,20 @@ def get_sources():
     '''
 
     get_news_url = base_url + api_key
-    
-
-    with urllib.request.urlopen(get_news_url) as url:
-     get_news_response = request.get(get_news_url).json()
+   
+    get_news_response = requests.get(get_news_url).json()
 
     if get_news_response['sources']:
-        news_result_list = get_news_response['sources']
-        news_result = process_result(news_result_list)
+        news_results_list = get_news_response['sources']
+        news_results = process_results(news_results_list)
 
-        return news_result
+        return news_results
 
 
-def process_result(news_result_list):
-    news_result= []
-    for news_item in news_result_list:
+
+def process_results(news_results_list):
+    news_results= []
+    for news_item in news_results_list:
 
         id = news_item.get('id')
         name = news_item.get('name')
@@ -47,23 +46,25 @@ def process_result(news_result_list):
         country = news_item.get('country')
 
         if name:
-            news_object = News(id, name, description,url,category,language,country)
-            news_result.append(news_object)
-    return news_result
+            news_obj = News(id, name, description,url,category,language,country)
+            news_results.append(news_obj)
+    return news_results
 
-#get articles:
-def get_article(id):
-    get_article_url = article_base_url.format(id,api_key)
+#get articles
+def get_articles(id):
+    get_articles_url = article_base_url.format(id,api_key)
     
-    get_article_response = request.get(get_article_url).json()
-    if get_article_response['articles']:
-        articles_result_list = get_article_response['articles']
-        articles_result = process_article(articles_result_list)
+    get_articles_response = requests.get(get_articles_url).json()
+    if get_articles_response['articles']:
+        articles_results_list = get_articles_response['articles']
+        articles_results = process_article(articles_results_list)
 
-        return articles_result
+        return articles_results
+
+
 
 def process_article(article_list):
-    articles_result= []
+    articles_results= []
     for article in article_list:
             id = article.get('id')
             author = article.get('author')
@@ -75,15 +76,17 @@ def process_article(article_list):
             content = article.get('content')
             if urlToImage:
                 article_result = Articles(id, author,title, description,url,urlToImage,publishedAt,content)
-                articles_result.append(article_result)
-    return articles_result
+                articles_results.append(article_result)
+    return articles_results
+
+
 
 def find_news(name):
     find_news_url = 'https://newsapi.org/v2/everything?q={}&apiKey={}'.format(name,api_key)
-    find_news_response = request.get(search_news_url).json()
+    find_news_response = requests.get(search_movie_url).json()
 
     if find_news_response['articles']:
         find_news_list = find_news_response['articles']
-        find_news_result = process_article(search_news_list) 
+        find_news_results = process_article(find_news_list) 
 
-    return find_news_result  
+    return find_news_results   

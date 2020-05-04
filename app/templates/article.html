@@ -10,18 +10,19 @@
 {% block navbar %}
 <div class="container-fluid">
 <nav class="navbar">
-    <h1>Welcome to News-App which highlights news all over the world: </h1>
+    <h1>Welcome to News App:</h1>
   </nav>
   </div>
   {% endblock%}
   
 {% block content %}
-
-        <div class="container" id="concept">
+<section class="bg-dark pt-5">
+        <div class="container" id="content">
                 <div class="row">
+                  
                     {{ macro.Article(article) }}
                 </div>
             </div>
-
+</section>
     
 {% endblock %}

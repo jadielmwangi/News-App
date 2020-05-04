@@ -12,20 +12,23 @@
 <!-- navbar block -->
 {% block navbar %}
 <div class="container-fluid">
+    
 <nav class="navbar">
-    <h1>Welcome to News App</h1>
-    <h3>An application that will help you view various articles and news from different platforms.</h3>
+    <h1>Welcome to News App:</h1>
+
+    <h3> News App is an application that will help you view various news and  articlesf from various platforms .</h3>
   </nav>
   </div>
   {% endblock%}
 <!-- Content block -->
 {% block content %}
-<section class="bg-info  mb-4" >
-    <div class="container" id="concept">
+<section class="bg-info  mb-3">
+    <div class="container" id="content">
             
         <div class="row">
             
-            {{macro.display_news(news_source)}}
+            {{macro.displayNewsList(news_source)}}
+
         </div>
     </div>
 </section>

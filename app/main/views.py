@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-from ..requests import get_sources, get_article,find_news
+from ..requests import get_sources, get_articles,find_news
 
 # Views
 @main.route('/')
@@ -10,19 +10,19 @@ def index():
     View root page function that returns the index page and its data
     '''
 
-    # Getting news source
+    # Getting news sources
     news_source = get_sources()
     
-    title = ' Welcome to to today News '
+    title = 'Home - Welcome to The best News  Highlight Website Online'
     find_news = request.args.get('news_query')
     if find_news:
-        return redirect(url_for('main.search', name=search_news))
+        return redirect(url_for('main.search', name=find_news))
     else:
         return render_template('index.html', title = title,news_source = news_source )
 
 @main.route('/news/<id>')
 def news(id):
-    article = get_article(id)
+    article = get_articles(id)
     print(article)
     return render_template('article.html',article = article)
 
